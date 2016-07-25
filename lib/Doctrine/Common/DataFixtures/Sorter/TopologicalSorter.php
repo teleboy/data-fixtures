@@ -156,11 +156,11 @@ class TopologicalSorter
 
                 case Vertex::IN_PROGRESS:
                     break; // Temporary workaround until original version is fixed
-                    throw new CircularReferenceException(
-                        'Graph contains cyclic dependency. An example of this problem would be the following: '
-                        . 'Class C has class B as its dependency. Then, class B has class A has its dependency. '
-                        . 'Finally, class A has class C as its dependency.'
-                    );
+//                    throw new CircularReferenceException(
+//                        'Graph contains cyclic dependency. An example of this problem would be the following: '
+//                        . 'Class C has class B as its dependency. Then, class B has class A has its dependency. '
+//                        . 'Finally, class A has class C as its dependency.'
+//                    );
 
                 case Vertex::NOT_VISITED:
                     $this->visit($childDefinition);
